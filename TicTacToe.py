@@ -28,6 +28,7 @@ def checkWin(board, char):
 	else:
 		return False
 
+
 def catWin(board):
 	for row in range(3):
 		for column in range(3):
@@ -59,12 +60,9 @@ while run:
 			print(column, end="  ")
 		print()
 
-	if checkWin(board, "X"):
+	if checkWin(board, "X") or checkWin(board, "O"):
 			run = False
 			break
-	elif checkWin(board, "O"):
-			run = False
-			break	
 	elif catWin(board):
 			cat = True
 			run = False
